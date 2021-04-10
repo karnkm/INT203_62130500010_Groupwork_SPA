@@ -27,6 +27,9 @@ export default {
                 }
             const response = await fetch("http://localhost:3000/students",{
                 method : "post",
+                //header เหมือนจ่าหน้าซองว่าส่งไปเป็น json 
+                // body เป็นเนื้อความข้างใน 
+                //JSON.stringify เปลี่ยน objเป็น json
                 headers : {"Content-Type":"application/json"},
                 body : JSON.stringify(Student)
             })
