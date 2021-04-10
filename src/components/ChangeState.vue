@@ -32,7 +32,20 @@ export default {
             console.log(response)
             this.$router.push('/')
         },
-       
+        async editStudent(){
+            let editedStudent = {
+                firstname : this.name,
+                lastname : this.lastname,
+                age : this.age
+                }
+            const response = await fetch(this.url,{
+                method:'put',
+                headers : {"Content-Type":"application/json"},
+                body : JSON.stringify(editedStudent)
+            })
+            console.log(response)
+            this.$router.push('/')
+        }
     },
     async mounted() {
         const response = await fetch(this.url);
