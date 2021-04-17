@@ -29,16 +29,22 @@ export default {
   color: rgb(255, 255, 255);
 }   
 
+#navbar{
+    background-color: #457B9D;
+    width: 100%;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
 #navbar a {
-  background-color: #457B9D;
-  padding: 15px;  
-  
-  
   color: #F1FAEE;
-  
   font-weight: lighter;
   font-size: x-large;
-  
+  display: block;
+  float: right;
+  text-align: center;
+  padding: 14px 16px;
 }
 #navbar a.router-link-exact-active {
     background-color: #E63946;
