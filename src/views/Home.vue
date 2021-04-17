@@ -6,7 +6,11 @@
       :key="student.id"
       @click="handleClick(student.id)"
     >
-      <p>{{ student.firstname }} {{ student.lastname }} {{ student.age }}</p>
+      <div class="border border-black">
+        <p>ชื่อ :{{ student.firstname }}</p>
+        <p>นามสกุล : {{ student.lastname }}</p>
+        <p>อายุ : {{ student.age }}</p>
+      </div>
     </div>
   </div>
 </template>

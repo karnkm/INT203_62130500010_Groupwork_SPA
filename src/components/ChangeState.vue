@@ -7,6 +7,8 @@
       <div class="flex justify-center">
             <button class="m-4 bg-green-400 p-3" @click="editStudent"><span class="material-icons">create</span></button>
             <button class="m-4 bg-red-400 p-3" @click="deleteStudent"><span class="material-icons">edit_off</span></button>
+            <button class="m-4 bg-yellow-400 p-3" @click="backTohome"><span class="material-icons">
+                arrow_back_ios_new</span></button>
       </div>
       
       <!-- {{name}},{{lastname}},{{age}} -->
@@ -44,6 +46,9 @@ export default {
                 body : JSON.stringify(editedStudent)
             })
             console.log(response)
+            this.$router.push('/')
+        },
+        backTohome(){
             this.$router.push('/')
         }
     },

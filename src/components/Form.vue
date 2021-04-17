@@ -1,11 +1,11 @@
 <template>
-<h2>Form</h2>
+<h2 class="text-lg italic font-semibold">You can add a student's information for your class.</h2>
   <form @submit.prevent="finishfilled">
-      <label>Name : <input type="text" class="border border-gray-200 mt-7" v-model="name" required></label><br>
-      <label>Lastname :<input type="text" class="border border-gray-200 mt-7" v-model="lastname" required></label><br>
-      <label>Age :<input type="number" class="border border-gray-200 mt-7" v-model="age" required></label><br>
-      <button class="m-4 bg-pink-400">submit</button>
-      {{name}},{{lastname}},{{age}}
+      <label>Name : <input type="text" class="border border-gray-200 mt-7 " v-model="name" required></label><br>
+      <label>Lastname : <input type="text" class="border border-gray-200 mt-7" v-model="lastname" required></label><br>
+      <label>Age : <input type="number" class="border border-gray-200 mt-7" v-model="age" required></label><br>
+      <button class="m-7 w-16 h-8 bg-green-400 rounded-lg text-white  hover:bg-green-700">Submit</button>
+      {{name}} {{lastname}} {{age}}
   </form>
 </template>
 
