@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Form from '../components/Form.vue'
 import ChangeState from '../components/ChangeState.vue'
+import Edit from '../components/Edit.vue'
 
 const routes = [
   {
@@ -23,10 +24,16 @@ const routes = [
     component: Form
   },
   {
-    path: '/edit/:id',
+    path: '/edit/',
     name: 'ChangeState',
     component: ChangeState,
-    props: true
+  },
+  
+  {
+    path : '/editing/:id',
+    name: 'Edit',
+    component : Edit,
+    props : true
   }
 ]
 

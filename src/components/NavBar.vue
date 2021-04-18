@@ -4,7 +4,7 @@
 </div>
 
   <div id="navbar" >
-    <router-link to="/edit/:id">Edit</router-link>  
+    <router-link :to="{name : 'ChangeState'}">Edit</router-link>  
     <router-link to="/form">Reserve</router-link>  
     <router-link to="/about">About</router-link>
     <router-link to="/">Vaccine</router-link>
