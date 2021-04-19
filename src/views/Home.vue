@@ -1,38 +1,60 @@
 <template>
-  <div class="home ">
-    <h2 class="text-xl italic font-semibold text-center pt-20">⊹ യ ⋆ We want you to chosse the best vaccine for yourself⋆ യ ⊹</h2>
-    <div
-      v-for="person in persons"
-      :key="person.id"
-      @click="handleClick(person.id)"
-    >
-      <div class="mx-36 p-60 rounded-3xl bg-pink-100 mt-16">
-        
-      </div>
-    </div>
+  <div class="home bg-yellow-100 h-screen">
+    <h2 class="text-xl italic font-semibold text-center pt-10 pb-12 text-blue-900">
+      ⊹ യ ⋆ We want you to chosse the best vaccine for yourself⋆ യ ⊹
+    </h2>
+
+    <vueper-slides slide-image-inside>
+      <vueper-slide
+        v-for="vaccinePhoto in vaccinePhotos"
+        :key="vaccinePhoto.id"
+        :image="vaccinePhoto.image"
+        :title="vaccinePhoto.title"
+      />
+    </vueper-slides>
     <div class="flex justify-center pt-12">
-      <button class="px-8 py-4 bg-red-500 rounded-md text-white hover:bg-blue-900">Let's see the different!</button> 
+      <button @click="gotoAbout" class="m-2 mb-10 px-8 py-3 bg-red-500 rounded-md text-white hover:bg-blue-900">Let's see the different!</button><br>
     </div>
   </div>
-  
-       
 </template>
 
 <script>
 // @ is an alias to /src
+import { VueperSlides, VueperSlide } from "vueperslides";
+import "vueperslides/dist/vueperslides.css";
 
 export default {
   name: "Home",
-  components: {},
+  components: { VueperSlides, VueperSlide },
   data() {
     return {
-      persons: [],
+      vaccinePhotos: [
+        {
+          id: 1,
+          image: require("@/assets/vaccine/pfizer.jpg"),
+        },
+        {
+          id: 2,
+          image: require("@/assets/vaccine/astra2.jpg"),
+        },
+        {
+          id: 3,
+          image: require("@/assets/vaccine/moderna2.jpg"),
+        },
+        {
+          id: 4,
+          image: require("@/assets/vaccine/johnson.jpg"),
+        },
+        {
+          id: 5,
+          image: require("@/assets/vaccine/sinovac.jpg"),
+        },
+      ],
     };
   },
   methods: {
-    handleClick(personId) {
-      console.log(personId);
-      // this.$router.push({ name: "ChangeState", params: { id: personId } });
+    gotoAbout() {
+      this.$router.push("/about");
     },
   },
 
@@ -43,3 +65,14 @@ export default {
   },
 };
 </script>
+
+<style>
+.vueperslide {
+  background: linear-gradient(15deg, #ffffff, #c7471f);
+}
+.vueperslide__image {
+  height: 100%;
+  width: 60%;
+  margin: 0 auto 0 auto;
+}
+</style>

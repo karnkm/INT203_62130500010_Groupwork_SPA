@@ -1,6 +1,7 @@
 <template>
+<p class="text-xl italic font-semibold text-center pt-10">✩ ‧ ₊ Edit your data and don't forget for checking ₊ ‧ ✩</p>
   <form @submit.prevent>
-      <div class="grid grid-cols-2 gap-4 mt-5 p-12 bg-pink-100">
+      <div class="grid grid-cols-2 gap-4 mt-10 p-12 bg-pink-100">
                 <div class="flex flex-col float-right">
                     <label for="firstname" class="text-sm leading-7 text-gray-600">First Name</label>
                     <input type="text" id="firstname" v-model="firstname" name="firstname" class="bg-white border-b-2 border-pink-300 rounded px-4 py-2 mb-4">

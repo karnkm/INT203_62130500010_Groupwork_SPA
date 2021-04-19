@@ -1,12 +1,12 @@
 <template>
-<p class="text-xl italic font-semibold text-center pt-8">✩ ‧ ₊ Edit your data and don't forget for checking ₊ ‧ ✩</p>
+<p class="text-xl italic font-semibold text-center pt-10 ">ʬʬʬ ⸝⸝  Cilck your data for edit ⸝⸝ ʬʬʬ </p>
 <div class="text-center">
 <div
       v-for="person in persons"
       :key="person.id"
       @click="handleClick(person)"
     >
-      <div class="mx-36 p-7 rounded-3xl bg-blue-100 mt-16 text-lg cursor-pointer">
+      <div class="mx-36 p-7 rounded-3xl bg-blue-100 mt-12 text-lg cursor-pointer">
         <p>ชื่อ :{{ person.firstname }}</p>
         <p>นามสกุล : {{ person.lastname }}</p>
         <p>อายุ : {{ person.age }}</p>

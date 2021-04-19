@@ -1,6 +1,6 @@
 <template>
   <div class="">
-     <h1 class="text-xl italic font-semibold text-center pt-20">
+     <h1 class="text-xl italic font-semibold text-center pt-10">
       ✧ More Vaccine for you ✦
     </h1>
     <div class="h-screen">
